@@ -1,10 +1,13 @@
 # Fire Detection Model using XGBoost
 
 Link to the Video 
-https://clipchamp.com/watch/qzvs8gyi0pA
+https://clipchamp.com/watch/qzvs8gyi0pA\
+
+Link to the deploy webapp
+https://mlsummatives-xqtr3sj7eypndhkfwxl6je.streamlit.app/
 
 ### Overview
-#### This repository contains a machine learning model developed using XGBoost for the purpose of fire detection based on sensor readings. The model is designed to analyze data from sensors and trigger alarms when it detects potential fire conditions.
+#### This repository contains a machine learning model developed using XGBoost, Neural Network, Linear Regression, etc for the purpose of fire detection based on sensor readings. The model is designed to analyze data from sensors and trigger alarms when it detects potential fire conditions.
 
 Table of Contents
 * Introduction
