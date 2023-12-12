@@ -90,18 +90,18 @@ def create_streamlit_app():
     st.sidebar.header("Enter New Data:")
 
     # User input
-    temperature = st.sidebar.number_input("Temperature [C]:", value=25.5)
-    humidity = st.sidebar.number_input("Humidity [%]:", value=50.0)
-    tvoc = st.sidebar.number_input("TVOC [ppb]:", value=300)
-    eco2 = st.sidebar.number_input("eCO2 [ppm]:", value=500)
-    raw_h2 = st.sidebar.number_input("Raw H2:", value=200)
-    raw_ethanol = st.sidebar.number_input("Raw Ethanol:", value=150)
-    pressure = st.sidebar.number_input("Pressure [hPa]:", value=1010.0)
-    pm1 = st.sidebar.number_input("PM1.0:", value=10.0)
-    pm25 = st.sidebar.number_input("PM2.5:", value=20.0)
-    nc05 = st.sidebar.number_input("NC0.5:", value=100.0)
-    nc1 = st.sidebar.number_input("NC1.0:", value=50.0)
-    nc25 = st.sidebar.number_input("NC2.5:", value=25.0)
+    temperature = st.sidebar.number_input("Temperature [C]:", value=20)
+    humidity = st.sidebar.number_input("Humidity [%]:", value=57.6)
+    tvoc = st.sidebar.number_input("TVOC [ppb]:", value=0)
+    eco2 = st.sidebar.number_input("eCO2 [ppm]:", value=400)
+    raw_h2 = st.sidebar.number_input("Raw H2:", value=12306)
+    raw_ethanol = st.sidebar.number_input("Raw Ethanol:", value=18520)
+    pressure = st.sidebar.number_input("Pressure [hPa]:", value=939.735)
+    pm1 = st.sidebar.number_input("PM1.0:", value=0)
+    pm25 = st.sidebar.number_input("PM2.5:", value=0)
+    nc05 = st.sidebar.number_input("NC0.5:", value=0)
+    nc1 = st.sidebar.number_input("NC1.0:", value=0)
+    nc25 = st.sidebar.number_input("NC2.5:", value=0)
 
     # Create a DataFrame with user input
     new_data = pd.DataFrame({
@@ -154,7 +154,6 @@ def main():
     st.sidebar.write("The neural network model has 3 hidden layers and 1 output layer.")
 
     st.title("🔥 Fire Alarm System 🔥")
-    st.write("For No fire alarm, you can try inputting this: 20, 57.36,	0,	400, 12306,	18520,	939.735, 0,	0,	0, 0,	0,	0")
 
     # Load and preprocess data
     x_train, x_test, y_train, y_test, scaler = load_and_preprocess_data()
