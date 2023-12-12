@@ -154,6 +154,7 @@ def main():
     st.sidebar.write("The neural network model has 3 hidden layers and 1 output layer.")
 
     st.title("🔥 Fire Alarm System 🔥")
+    st.write("For No fire alarm, you can try inputting this: 20, 57.36,	0,	400, 12306,	18520,	939.735, 0,	0,	0, 0,	0,	0")
 
     # Load and preprocess data
     x_train, x_test, y_train, y_test, scaler = load_and_preprocess_data()
