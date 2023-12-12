@@ -1,8 +1,9 @@
 # Import necessary libraries
+import matplotlib
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -73,16 +74,16 @@ def make_predictions(model, new_data, scaler):
     new_features = scaler.transform(new_data)
     return model.predict(new_features)
 
-# Function to display bar plots for input features
-def display_feature_plots(new_data, prediction):
-    colors = ['lightblue' if p == 0 else 'orange' for p in prediction]
+# # Function to display bar plots for input features
+# def display_feature_plots(new_data, prediction):
+#     colors = ['lightblue' if p == 0 else 'orange' for p in prediction]
     
-    fig, ax = plt.subplots(figsize=(10, 6))
-    new_data.T.plot(kind='bar', legend=False, ax=ax, color=colors, edgecolor='black', linewidth=2)
-    plt.title("Input Features")
-    plt.xlabel("Features")
-    plt.ylabel("Values")
-    st.pyplot(fig)
+#     fig, ax = plt.subplots(figsize=(10, 6))
+#     new_data.T.plot(kind='bar', legend=False, ax=ax, color=colors, edgecolor='black', linewidth=2)
+#     plt.title("Input Features")
+#     plt.xlabel("Features")
+#     plt.ylabel("Values")
+#     st.pyplot(fig)
 
 
 # Function to create the Streamlit App
@@ -135,16 +136,16 @@ def create_streamlit_app():
 
     # Display bar plots for the input features
     st.subheader("Input Features:")
-    display_feature_plots(new_data)
+    # display_feature_plots(new_data)
 
-# Function to display bar plots for input features
-def display_feature_plots(new_data):
-    fig, ax = plt.subplots(figsize=(10, 6))
-    new_data.T.plot(kind='bar', legend=False, ax=ax)
-    plt.title("Input Features")
-    plt.xlabel("Features")
-    plt.ylabel("Values")
-    st.pyplot(fig)
+# # Function to display bar plots for input features
+# def display_feature_plots(new_data):
+#     fig, ax = plt.subplots(figsize=(10, 6))
+#     new_data.T.plot(kind='bar', legend=False, ax=ax)
+#     plt.title("Input Features")
+#     plt.xlabel("Features")
+#     plt.ylabel("Values")
+#     st.pyplot(fig)
 
 # Streamlit App main function
 def main():
